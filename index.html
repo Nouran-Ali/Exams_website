@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <div id="formContainer" method="POST">
+                <div id="header"> </div>
+                <h1 style="padding-top: 15px"> Create Account</h1>
+                <input type="text" name="fname" placeholder="First Name" id="fname" required title="Please enter your first name">
+                <input type="text" name="lname" placeholder="Last Name" id="lname" required title="Please enter your last name">
+                <input type="email" name="email" placeholder="Email" id="email" required title="Please enter your email">
+                <input type="password" name="password" placeholder="Password" id="password" required pattern="{8,}" title="Must contain at least 8 or more characters">
+                <input type="password" name="password" placeholder="Confirm Password" id="rePassword" required pattern="{8,}" title="Must contain at least 8 or more characters">
+                <p id="errorMessage"></p>
+                <button style="margin-top:10px" id="signUp" onclick="signUp()"> Create Account</button>
+                <h5>Already have an account! <a class="ghost" id="signin" style="color:blue;"><u>Sign In</u></a></h5>
+            </div>
+        </div>
+        <div class="form-container sign-in-container">
+            <div id="formContainer" method="POST">
+                <div id="header"> </div>
+                <h1 style="padding-bottom: 15px"> Login Now</h1>
+                <input type="email" name="email" placeholder="Email" id="emailLogin">
+                <input type="password" name="password" placeholder="Password" id="passwordLogin">
+                <p id="sorryMessage"></p>
+                <button style="margin-top: 10px" onclick="signIn()" id="signIn">Login</button>
+                <h5>New to here! <a class="ghost" id="signup" style="color:blue;"><u>Sign Up</u></a></h5>
+            </div>      
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src="img/meric-dagli-7NBO76G5JsE-unsplash.jpg" alt="movie-1" height="480" width="500"/>  
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <img src="img/meric-dagli-7NBO76G5JsE-unsplash.jpg" alt="movie-2" height="480" width="500"/>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+</body>
+</html>
